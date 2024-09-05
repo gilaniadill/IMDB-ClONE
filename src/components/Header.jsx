@@ -3,6 +3,7 @@ import Menu from './Menu'
 import {AiFillHome} from 'react-icons/ai'
 import {AiFillInfoCircle } from 'react-icons/ai'
 import Link from 'next/link'
+import DarkModeSwitch from './DarkModeSwitch'
 
 const Header = () => {
   return (
@@ -14,12 +15,14 @@ const Header = () => {
                     
             </div>
 
-            <Link href={'/'} className="nav-right flex items-center">
+            <div className="nav-right flex items-center gap-5">
+              <DarkModeSwitch/>
+            <Link href={'/'} className=" flex items-center">
                 <span className='bg-amber-500 px-2 py-1 rounded-lg text-xl font-bold' >IMDB</span>
                 <span className='hidden sm:inline text-xl'>Clone</span>
 
             </Link>
-
+            </div>
 
         </div>
     </>
